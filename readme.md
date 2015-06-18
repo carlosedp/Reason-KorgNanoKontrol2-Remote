@@ -3,7 +3,7 @@
 Propellerhead Software  
 Carlos Eduardo, SP/Brazil, <carlosedp@gmail.com>  
 
-This version includes soft pickup for the knobs and sliders. This way they only act when the value on the knob matches the value of the control it is assigned. This way it is prevented that the control "jumps" when you modify a knob.
+This version includes soft pickup for the knobs and sliders. This way the analog controls only act when the value on the knob matches the value of the control it is assigned so it is prevented that the control "jumps" when you modify a knob.
 
 # Installation
 
