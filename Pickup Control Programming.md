@@ -22,7 +22,7 @@ Knobs and Sliders are not set up as auto inputs or outputs. Instead we handle th
 
 Below is an example on how to integrate the soft-pickup control to your controller:
 
-Add this variable to beginning of the lua script. It tells the first analog control index in the "items" array. It's currently 3 because our first controle is the third in the "items" array:
+Add this variable to beginning of the lua script. It tells the first analog control index in the "items" array. It's currently 3 because our first control is the third in the "items" array:
 
     --position of first analog control in the items table
     gFirstAnalogIndex = 3
@@ -32,6 +32,7 @@ Add or change your analog controls to have both input and output tags with the "
     local items=
      {
       {name="Stop Button", input="button", output="value"},
+      {name="Play Button", input="button", output="value"},
 
       {name="Knob 1", input="value", output="value", min=0, max=127},
       {name="Knob 2", input="value", output="value", min=0, max=127},
@@ -40,7 +41,7 @@ Add or change your analog controls to have both input and output tags with the "
       {name="Knob 5", input="value", output="value", min=0, max=127},
       ....
 
-In the inputs array, do not map( or comment) the analog CC mapping to avoid automatic match by the Remote engine. Ex:
+In the inputs array, do not map(or comment if they exist) the analog CCs mapping to avoid automatic match by the Remote engine. Ex:
 
     local inputs=
      {
@@ -55,21 +56,19 @@ In the inputs array, do not map( or comment) the analog CC mapping to avoid auto
 
 There is no need to map the controls in the "outputs" array.
 
-Add the following code to yout script respecting the changes I describe below:
+Add the following code to yout script respecting the changes I describe below.
 
-Change this variable to the number of analog controls you have in yout controller. Remember that they must be in the "itens" array **in order**. So if you have 8 knobs and 8 sliders, this must be 16 and all 16 controls must be in the "itens" array (Knob1, Knob2.... Slider1, Slider2...).
+Change this variable to the number of analog controls you have in yout controller. Remember that they must be in the "items" array **in order**. So if you have 8 knobs and 8 sliders, this must be 16 and all 16 controls must be in the "itens" array (Knob1, Knob2.... Slider1, Slider2...) sequentially.
 
     --"Analogs" indicates non-encoder analog controls and refers to both knobs and sliders on the surface
     gNumberOfAnalogs = 16
 
-
-Here one must map the control index to the CC it sends. The index is the sequence of controls from the "items" array and between the brackets is the CC that control sends. The MIDI channel is set in another section. You find this either in your controller editor or using a MIDI monitor application. I have recommendation in the end of this doc.
+Here you must map the control index to the CC it sends. The index is the sequence of controls from the "items" array and between the brackets is the CC that control sends. The MIDI channel is set in another section. You find this either in your controller editor or using a MIDI monitor application. I have tool recommendation in the end of this doc. In the example I split the array in two lines.
 
     gAnalogCCLookup = { --converts CC numbers to slider/knob numbers
         [16]=1,[17]=2,[18]=3,[19]=4,[20]=5,[21]=6,[22]=7,[23]=8, --Knobs 1-8
         [0]=9,[1]=10,[2]=11,[3]=12,[4]=13,[5]=14,[6]=15,[7]=16, --Sliders 1-8
         }
-
 
 No need to touch lines below:
 
@@ -83,8 +82,7 @@ No need to touch lines below:
         gSentValueSettleTime[i] = 250 --number of milliseconds to wait for a sent slider or knob value to be echoed back before reevaluating synchronization
     end
 
-
-Here the only change needed is to set the MIDI channel used by the analog controls. It goes in the remote.match_midi line and the value is between B0 for channel 1 to BF to channel 16. Below I use BF because my controller uses channel 16. Do not touch the rest of the pattern ("yy xx" part).
+Here the only change needed is to set the MIDI channel used by the analog controls. It goes in the remote.match_midi line and the value is between `B0` for channel 1 to `BF` for channel 16. Below I use BF because my controller uses channel 16. Do not touch the rest of the pattern ("yy xx" part).
 
     --acceptable difference between the first reported value from a control and the machine state for the 2 to be considered synchronized
     gStartupLiveband = 3
