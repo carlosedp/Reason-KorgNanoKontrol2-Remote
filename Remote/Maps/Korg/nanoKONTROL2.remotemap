@@ -1321,7 +1321,6 @@ Map	Slider 2		Voice Synth Level
 //<	20110628
 Scope	Propellerheads	Reason Master Section
 Define Group	Target	Channels	Master
-
 //	Control Surface Item	Key	Remotable Item	Scale	Mode
 
 Map	Set Marker Button		Target=Master			Channels
@@ -1329,6 +1328,14 @@ Map	Set Marker Button		Target=Channels			Master
 
 Map	Left Marker Button		Previous 8 Remote Base Channel
 Map	Right Marker Button		Next 8 Remote Base Channel
+Map	Prev Track Button		Previous Remote Base Channel
+Map	Next Track Button		Next Remote Base Channel
+
+Map	Slider 8		Master Level
+Map	Knob 8		Ctrl Room Level
+Map	Button S8		All Solo Off
+Map	Button M8		All Mutes Off
+Map	Button R8		Bypass Insert FX
 
 Map	Slider 1		Channel 1 Level			Channels
 Map	Slider 2		Channel 2 Level			Channels
@@ -1337,7 +1344,7 @@ Map	Slider 4		Channel 4 Level			Channels
 Map	Slider 5		Channel 5 Level			Channels
 Map	Slider 6		Channel 6 Level			Channels
 Map	Slider 7		Channel 7 Level			Channels
-Map	Slider 8		Channel 8 Level			Channels
+//Map	Slider 8		Channel 8 Level			Channels
 
 Map	Knob 1		Channel 1 Pan			Channels
 Map	Knob 2		Channel 2 Pan			Channels
@@ -1346,7 +1353,7 @@ Map	Knob 4		Channel 4 Pan			Channels
 Map	Knob 5		Channel 5 Pan			Channels
 Map	Knob 6		Channel 6 Pan			Channels
 Map	Knob 7		Channel 7 Pan			Channels
-Map	Knob 8		Channel 8 Pan			Channels
+//Map	Knob 8		Channel 8 Pan			Channels
 
 Map	Button S1		Channel 1 Solo			Channels
 Map	Button S2		Channel 2 Solo			Channels
@@ -1355,7 +1362,7 @@ Map	Button S4		Channel 4 Solo			Channels
 Map	Button S5		Channel 5 Solo			Channels
 Map	Button S6		Channel 6 Solo			Channels
 Map	Button S7		Channel 7 Solo			Channels
-Map	Button S8		Channel 8 Solo			Channels
+//Map	Button S8		Channel 8 Solo			Channels
 
 Map	Button M1		Channel 1 Mute			Channels
 Map	Button M2		Channel 2 Mute			Channels
@@ -1364,7 +1371,7 @@ Map	Button M4		Channel 4 Mute			Channels
 Map	Button M5		Channel 5 Mute			Channels
 Map	Button M6		Channel 6 Mute			Channels
 Map	Button M7		Channel 7 Mute			Channels
-Map	Button M8		Channel 8 Mute			Channels
+//Map	Button M8		Channel 8 Mute			Channels
 
 Map	Button R1		Channel 1 Bypass Insert FX			Channels
 Map	Button R2		Channel 2 Bypass Insert FX			Channels
@@ -1373,9 +1380,7 @@ Map	Button R4		Channel 4 Bypass Insert FX			Channels
 Map	Button R5		Channel 5 Bypass Insert FX			Channels
 Map	Button R6		Channel 6 Bypass Insert FX			Channels
 Map	Button R7		Channel 7 Bypass Insert FX			Channels
-Map	Button R8		Channel 8 Bypass Insert FX			Channels
-
-
+//Map	Button R8		Channel 8 Bypass Insert FX			Channels
 
 Map	Slider 1		FX1 Return Level			Master
 Map	Slider 2		FX2 Return Level			Master
@@ -1429,6 +1434,14 @@ Map	Set Marker Button		Target=Channels			Master
 
 Map	Left Marker Button		Previous 8 Remote Base Channel
 Map	Right Marker Button		Next 8 Remote Base Channel
+Map	Prev Track Button		Previous Remote Base Channel
+Map	Next Track Button		Next Remote Base Channel
+
+Map	Slider 8		Master Level
+Map	Knob 8		Ctrl Room Level
+Map	Button S8		All Solo Off
+Map	Button M8		All Mutes Off
+Map	Button R8		Bypass Insert FX
 
 Map	Slider 1		Channel 1 Level			Channels
 Map	Slider 2		Channel 2 Level			Channels
@@ -1437,7 +1450,7 @@ Map	Slider 4		Channel 4 Level			Channels
 Map	Slider 5		Channel 5 Level			Channels
 Map	Slider 6		Channel 6 Level			Channels
 Map	Slider 7		Channel 7 Level			Channels
-Map	Slider 8		Channel 8 Level			Channels
+//Map	Slider 8		Channel 8 Level			Channels
 
 Map	Knob 1		Channel 1 Pan			Channels
 Map	Knob 2		Channel 2 Pan			Channels
@@ -1446,7 +1459,7 @@ Map	Knob 4		Channel 4 Pan			Channels
 Map	Knob 5		Channel 5 Pan			Channels
 Map	Knob 6		Channel 6 Pan			Channels
 Map	Knob 7		Channel 7 Pan			Channels
-Map	Knob 8		Channel 8 Pan			Channels
+//Map	Knob 8		Channel 8 Pan			Channels
 
 Map	Button S1		Channel 1 Solo			Channels
 Map	Button S2		Channel 2 Solo			Channels
@@ -1455,7 +1468,7 @@ Map	Button S4		Channel 4 Solo			Channels
 Map	Button S5		Channel 5 Solo			Channels
 Map	Button S6		Channel 6 Solo			Channels
 Map	Button S7		Channel 7 Solo			Channels
-Map	Button S8		Channel 8 Solo			Channels
+//Map	Button S8		Channel 8 Solo			Channels
 
 Map	Button M1		Channel 1 Mute			Channels
 Map	Button M2		Channel 2 Mute			Channels
@@ -1464,7 +1477,7 @@ Map	Button M4		Channel 4 Mute			Channels
 Map	Button M5		Channel 5 Mute			Channels
 Map	Button M6		Channel 6 Mute			Channels
 Map	Button M7		Channel 7 Mute			Channels
-Map	Button M8		Channel 8 Mute			Channels
+//Map	Button M8		Channel 8 Mute			Channels
 
 Map	Button R1		Channel 1 Bypass Insert FX			Channels
 Map	Button R2		Channel 2 Bypass Insert FX			Channels
@@ -1473,9 +1486,7 @@ Map	Button R4		Channel 4 Bypass Insert FX			Channels
 Map	Button R5		Channel 5 Bypass Insert FX			Channels
 Map	Button R6		Channel 6 Bypass Insert FX			Channels
 Map	Button R7		Channel 7 Bypass Insert FX			Channels
-Map	Button R8		Channel 8 Bypass Insert FX			Channels
-
-
+//Map	Button R8		Channel 8 Bypass Insert FX			Channels
 
 Map	Slider 1		FX1 Return Level			Master
 Map	Slider 2		FX2 Return Level			Master
@@ -1517,8 +1528,6 @@ Map	Button M5		FX5 Mute			Master
 Map	Button M6		FX6 Mute			Master
 Map	Button M7		FX7 Mute			Master
 Map	Button M8		FX8 Mute			Master
-
-
 
 
 //<	20110628
