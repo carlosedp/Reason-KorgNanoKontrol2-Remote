@@ -1,1 +1,16 @@
-version={0,0,1}function remote_supported_control_surfaces() local surfaces = {  { manufacturer="Korg", model="nanoKONTROL2",    source="nanoKontrol2.lua", picture="nanoKontrol2.png",    in_ports={{description="In Port"}},    out_ports={{description="Out Port"}},    setup_info_text="The program will set your nanoKontrol2 to Native Mode. This requires that Global MIDI Channel 1 is selected. The nanoKontrol2 will be returned to normal mode when you disable it in the Preferences or quit the program.",    setup_user_action_text="Your nanoKontrol2 will now be set to Native Mode for exclusive use by Reason.",    has_keyboard=false  }, } return surfacesend
+version={0,0,1}
+
+function remote_supported_control_surfaces()
+ local surfaces =
+ {
+  { manufacturer="Korg", model="nanoKONTROL2 w/ Soft Pickup",
+    source="nanoKontrol2.lua", picture="nanoKontrol2.png",
+    in_ports={{description="In Port"}},
+    out_ports={{description="Out Port"}},
+    setup_info_text="The program will set your nanoKontrol2 to Native Mode. This requires that Global MIDI Channel 1 is selected. The nanoKontrol2 will be returned to normal mode when you disable it in the Preferences or quit the program.",
+    setup_user_action_text="Your nanoKontrol2 will now be set to Native Mode for exclusive use by Reason.",
+    has_keyboard=false
+  },
+ }
+ return surfaces
+end
